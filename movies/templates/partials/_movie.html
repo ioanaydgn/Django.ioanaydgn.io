@@ -1,0 +1,17 @@
+{% load static %}
+
+<div class="card" style="width: 18rem;">
+    <img src="{% static "img/"|add:movie.banner width-2160%}" class="card-img-top">
+    <div class="card-body">
+    <h5 class="card-title">{{movie.movie_name}}</h5>
+    <p class="card-text">{{movie.movie_descriptions}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    </ul>
+    <div class="card-body">
+        <a href="{% url "details" movie.id %}" class="btn btn-primary">Watch</a>
+    </div>
+</div>
